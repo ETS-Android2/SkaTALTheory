@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:onClick="openfilechooser"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:text="Загрузить файл"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Инструмент для списывания проверочных работ с помощью микронаушника (или любой другой незаметной аудиотехники). Включите приложение, загрузите файл со шпорой, подключите наушники, и берите вариант. Начать прочтение номеров вариантов - +/- громкость, выбрать вариант - та же кнопка, при повторном прочтении - вновь нажмите эту кнопку на нужном варианте. TTS сервис начнет чтение нужной теории."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="10dp"
+        android:text="(После начала проигрывания, пожалуйста, не открывайте новый файл. Также, из-за аппаратных ограничений, выбор по кнопке громкости при выключенном экране возможен только во время озвучивания номера.)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text='Теорию следует вносить в формате TXT, разделяя варианты вопросов строчкой, начинающейся с "Tab", а сами вопросы - символом "#" Строчка с "Tab" будет проговариваться как номер - вы можете внести в нее, например, ключевые слова вопроса.'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="366dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="115dp"
+        android:onClick="opentimecodechooser"
+        android:text="Загрузить файл с таймингом+аудио"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="409dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
